@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anytime is Train Time</title>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lora|PT+Sans+Narrow:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+  <body>
+    <div class="container mb-5">
+      <div class="jumbotron-fluid bg-dark p-4 mb-3">
+        <h2 class="display-4 cusFont">Anytime is Train Time</h2>
+        <p class="lead">Choo Choo Chee Chee</p>
+      </div>
+
+      <table id="schedule" class="table col s12 bg-light border">
+        <thead class="bg-dark lead col s12">
+          <tr>
+            <th scope="col" data-field="train">Train Name</th>
+            <th scope="col" data-field="name">Destination</th>
+            <th scope="col" data-field="frequency">Frequency(Mins)</th>
+            <th scope="col" data-field="arrival">Next Arrival</th>
+            <th scope="col" data-field="away">Minutes Away</th>
+          </tr>
+        </thead>
+        <tbody class="blacklead">
+          <tr>
+            <td>Thomas</td>
+            <td>New York</td>
+            <td>25</td>
+            <td>14:40</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+   
+  
+    <form id="mainForm" class="col s12 bg-light border">
+      <div class="row lead bg-dark">
+          <div class="container pt-1">
+              <h5>Add Train</h5>
+          </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 form-group">
+          <label for="trainName">Train Name</label>
+          <input placeholder="Thomas" id="train_name" type="text" class="validate form-control" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 form-group">
+          <label for="destination">Destination</label>
+          <input placeholder="New York" id="destination" type="text" class="validate form-control" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 form-group">
+          <label for="firstTrain">First Train Time</label>
+          <input placeholder="(HH:MM) Miltary Time" id="firstTrain" type="text" class="validate form-control" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 form-group">
+          <label for="frequency">Frequency</label>
+          <input placeholder="Frequency (minutes)" id="frequency" type="text" class="validate form-control" required>
+        </div>
+      </div>
+      <button id="submit" class="btn btn-secondary mb-3" type="submit">Submit
+        <i class="material-icons right"></i>
+      </button>
+    </form>
+  </div>
+  
+  <script type="text/javascript" src="assets/javascript/main.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
